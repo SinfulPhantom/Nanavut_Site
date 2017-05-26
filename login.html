@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login/Creation</title>
+    <script type="text/javascript" src="Functions.js"></script>
+    <style>
+      #title {
+        text-align: center;
+        border-bottom: 2px solid black;
+      }
+
+      #parent {
+        overflow-x: hidden;
+        text-align: center;
+      }
+
+      #current {
+        position: relative;
+        text-align: left;
+        display: inline-block;
+        width: 49%;
+        height: 300px;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+
+      #new {
+        position: relative;
+        text-align: left;
+        width: 50%;
+        height: 400px;
+        display: inline-block;
+        float: right;
+        margin-left: -12px;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+
+      .creation {
+        display: none;
+        position: relative;
+        text-align: left;
+        width: 50%;
+        height: 400px;
+        display: inline-block;
+        float: right;
+        margin-left: -12px;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h2>Account Login/Creation</h2>
+        <p>Members recieve a monthly newsletter and email alert on upcoming events.</p>
+    </div>
+    <div id="parent">
+      <div id="current">
+        <h3 style="padding-top: 20px;">Current Members: Enter your Username and Password</h3>
+          <p>Username</p>
+          <input type="text" id="username" onchange="validateUsername(true)"></input>
+            <span id="user"></span>
+          <p>Password</p>
+          <input type="password" style="margin-bottom: 30px;" id="password"</input><br />
+          <button onclick="login(true)">Login</button><span id="loginButton"></span>
+    </div>
+    <div id="new" class="creation">
+      <h3 style="padding-left:20px; padding-top:20px;">Not a Member? Create Your Free Account Now!!!</h3>
+      <div id="form"><button style="margin: 20px;" onclick="createForm()">CREATE ACCOUNT</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

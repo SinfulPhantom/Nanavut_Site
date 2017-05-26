@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<style>
+			h1 {
+				text-align: center;
+			}
+			form {
+				text-align: center;
+			}
+			h2 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	<h1 align="position:center">Administrative Blog Form</h1>
+	
+	<form action="http://localhost:8090/process.php" method="post" enctype="multipart/form-data">
+	<div align="center">
+		<div align="center" style="width:25%;padding:10px;border:1px solid black;">
+		<table>
+			<tr>
+				<td align="right">
+					Name:
+				</td>
+				<td>
+					<input type="text" name="firstName">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Title:
+				</td>
+				<td>
+					<input type="text" name="title">
+				</td>
+			<tr>
+				<td align="right">
+					Image:
+				</td>
+				<td>
+					<input type="file" name="image" accept="image/*">
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+			<br>
+			<h2>Enter Blog Below</h2>
+			<textarea rows="20" cols="50" name="blog_text"></textarea>
+			<br>
+			<button type="reset" value="Reset" style="margin-right:100px;margin-top:25px;">Reset</button>
+			<button type="submit" value="Submit">Submit</button>
+	</form>
+	<?php var_dump($_POST, $_FILES); ?> 
+	</body>
+</html>
